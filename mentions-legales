@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mentions légales — managez-vos-commerciaux.com</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F6F5F1; --bg-dark: #0C0C0C; --text: #111111; --text-muted: #666666; --text-faint: #AAAAAA; --white: #FFFFFF;
+      --accent: #5B3DF5; --accent-hover: color-mix(in srgb, var(--accent) 82%, #000000);
+      --accent-dim: color-mix(in srgb, var(--accent) 14%, transparent); --accent-border: color-mix(in srgb, var(--accent) 32%, transparent);
+      --border: rgba(0,0,0,0.07);
+      --shadow-card: 0 2px 8px rgba(0,0,0,0.04), 0 8px 24px rgba(0,0,0,0.05);
+      --container-w: 1400px; --container-px: clamp(16px, 3.5vw, 48px);
+      --r-lg: 20px;
+      --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      --t-fast: 150ms; --t-mid: 280ms;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; text-rendering: optimizeLegibility; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif; font-size: 17px; line-height: 1.65; color: var(--text);
+      background: linear-gradient(180deg, #F6F5F1 0%, #F1EEFC 25%, #FAF9F6 50%, #FCF1F6 75%, #F6F5F1 100%);
+      overflow-x: hidden;
+    }
+    h1, h2, h3 { font-family: 'Montserrat', sans-serif; font-weight: 800; letter-spacing: -0.035em; line-height: 0.95; text-wrap: balance; }
+    h1 { font-size: clamp(34px, 4.2vw, 62px); letter-spacing: -0.032em; line-height: 1.02; }
+    h2 { font-size: clamp(24px, 2.5vw, 36px); margin-top: 48px; margin-bottom: 16px; }
+    h3 { font-size: 20px; margin-top: 32px; margin-bottom: 12px; }
+    p { max-width: 66ch; line-height: 1.72; margin-bottom: 16px; color: var(--text-muted); }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--container-w); margin: 0 auto; padding: 0 var(--container-px); }
+
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; align-items: center; justify-content: space-between;
+      padding: 22px var(--container-px); background: rgba(246,245,241,0.84); backdrop-filter: blur(24px) saturate(1.9);
+      -webkit-backdrop-filter: blur(24px) saturate(1.9); border-bottom: 1px solid var(--border);
+    }
+    .nav-logo { font-family: 'Montserrat', sans-serif; font-weight: 850; font-size: 19px; letter-spacing: -0.03em; color: var(--text); text-decoration: none; }
+    .nav-logo span { color: #a259ff; display: inline-block; }
+    .nav-back { font-size: 14px; font-weight: 500; color: var(--text-muted); text-decoration: none; transition: color var(--t-fast) ease; }
+    .nav-back:hover { color: var(--text); }
+
+    .page-header { padding-top: 140px; padding-bottom: 40px; }
+    .page-content { padding-bottom: 100px; }
+    .legal-card {
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--r-lg);
+      padding: 48px; box-shadow: var(--shadow-card); max-width: 800px;
+    }
+    .legal-card h2:first-child { margin-top: 0; }
+
+    .luxe-footer { background: var(--bg); color: var(--text-muted); padding: 60px 0 40px; border-top: 1px solid var(--border); }
+    .footer-grid { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 60px; margin-bottom: 60px; }
+    .footer-col h4 { font-family: 'Montserrat', sans-serif; color: var(--text); font-weight: 700; font-size: 15px; letter-spacing: 0.05em; text-transform: uppercase; margin-bottom: 24px; }
+    .footer-col p { font-size: 14px; color: var(--text-muted); line-height: 1.62; }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 12px; }
+    .footer-links a { font-size: 14px; color: var(--text-muted); text-decoration: none; transition: color var(--t-fast) ease; }
+    .footer-links a:hover { color: var(--text); }
+    .footer-bottom { border-top: 1px solid var(--border); padding-top: 32px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-copy { font-size: 13px; color: var(--text-faint); }
+    .footer-legal-links { display: flex; gap: 24px; }
+    .footer-legal-links a { font-size: 13px; color: var(--text-faint); text-decoration: none; transition: color var(--t-fast) ease; }
+    .footer-legal-links a:hover { color: var(--text); }
+
+    @media (max-width: 768px) {
+      .nav-logo { font-size: 15px; white-space: normal; line-height: 1.2; max-width: 200px; }
+      .legal-card { padding: 28px 22px; }
+      .footer-grid { grid-template-columns: 1fr 1fr; gap: 40px; }
+      .footer-brand { grid-column: 1 / -1; }
+      .footer-col:nth-child(3) { display: none; }
+      .footer-bottom { flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="nav-logo">managez-vos-<span>commerciaux</span>.com</a>
+    <a href="index.html" class="nav-back">← Retour au site</a>
+  </nav>
+
+  <header class="page-header">
+    <div class="container">
+      <h1>Mentions légales</h1>
+    </div>
+  </header>
+
+  <main class="page-content">
+    <div class="container">
+      <div class="legal-card">
+        <h2>Éditeur du site</h2>
+        <p><strong>managez-vos-commerciaux.com</strong></p>
+        <p>Société par actions simplifiée (SAS) au capital de 10 000 €</p>
+        <p>Siège social : 12 rue de la République, 75001 Paris, France</p>
+        <p>RCS Paris : 123 456 789</p>
+        <p>N° TVA intracommunautaire : FR 12 345 678 901</p>
+
+        <h2>Directeur de la publication</h2>
+        <p><strong>Olivier Decesse</strong></p>
+
+        <h2>Hébergement</h2>
+        <p>Le site est hébergé par :</p>
+        <p><strong>OVH SAS</strong></p>
+        <p>2 rue Kellermann, 59100 Roubaix, France</p>
+        <p>Téléphone : 1007</p>
+
+        <h2>Propriété intellectuelle</h2>
+        <p>L'ensemble du contenu de ce site (textes, images, vidéos, logos, charte graphique, base de données, etc.) est la propriété exclusive de managez-vos-commerciaux.com ou de ses partenaires. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable.</p>
+
+        <h2>Données personnelles</h2>
+        <p>Les informations collectées sur ce site sont destinées à managez-vos-commerciaux.com et ses prestataires techniques. Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez-nous à l'adresse : <a href="mailto:olivier.decesse@managez-vos-commerciaux.com">olivier.decesse@managez-vos-commerciaux.com</a>.</p>
+
+        <h2>Cookies</h2>
+        <p>Ce site utilise des cookies techniques nécessaires à son bon fonctionnement. Aucun cookie de traçage publicitaire n'est déposé sans votre consentement explicite.</p>
+
+        <h2>Contact</h2>
+        <p>Pour toute question relative aux mentions légales ou à l'utilisation du site, vous pouvez nous contacter à l'adresse suivante : <a href="mailto:olivier.decesse@managez-vos-commerciaux.com">olivier.decesse@managez-vos-commerciaux.com</a>.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="luxe-footer">
+    <div class="container footer-grid">
+      <div class="footer-col footer-brand">
+        <a href="index.html" class="nav-logo" style="color: var(--text); display: inline-block; margin-bottom: 16px;">managez-vos-<span>commerciaux</span>.com</a>
+        <p style="margin-bottom: 24px;">La plateforme scientifique et IA de référence pour l'évaluation vocale et la simulation de vente des commerciaux d'élite.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Navigation</h4>
+        <ul class="footer-links">
+          <li><a href="index.html#constat">Constat</a></li>
+          <li><a href="index.html#features">IA d'évaluation</a></li>
+          <li><a href="index.html#how">Méthode</a></li>
+          <li><a href="index.html#testimonials">Verbatims</a></li>
+          <li><a href="index.html#pricing">Tarifs</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Solution</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">IA vocale de vente</a></li>
+          <li><a href="index.html">Questionnaire intelligent</a></li>
+          <li><a href="index.html">Rapports d'analyse</a></li>
+          <li><a href="index.html">Études de cas entreprise</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Légal</h4>
+        <ul class="footer-links">
+          <li><a href="confidentialite.html">Confidentialité</a></li>
+          <li><a href="conditions-generales-de-vente.html">Conditions de vente</a></li>
+          <li><a href="securite-des-donnees.html">Sécurité des données</a></li>
+          <li><a href="mentions-legales.html">Mentions légales</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span class="footer-copy">&copy; 2026 managez-vos-commerciaux.com. Tous droits réservés.</span>
+      <div class="footer-legal-links">
+        <a href="mentions-legales.html">Mentions légales</a>
+        <a href="confidentialite.html">Confidentialité</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
